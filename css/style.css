@@ -1,0 +1,215 @@
+  /* GLOBAL */
+  :root {
+    --primary-font: "Capture", Helvetica, sans-serif, "Helvetica Roman", sans-serif;
+    --secondary-font: 'VT323', monospace;
+    --text-color: #291F1E;
+    --purple-color: #7c1eff;
+    --white-color: #fbfbfb;
+    --red-color: #CC2936;
+    --green-color: #31f8dc;
+    --fade-in-effect: fadein 800ms;
+    font-size: calc(1.4em + 0.5vw);
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    background-color: var(--white-color);
+    /* letter-spacing: -0.01em; */
+    /* cursor: ns-resize; */
+    /* --accent-color: #E2EECE; */
+    /* --text-color-secondary: #ECECEC; */
+    /* --background-color: #f5e9d2; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-animation: var(--fade-in-effect);
+    -moz-animation: var(--fade-in-effect);
+    -ms-animation: var(--fade-in-effect);
+    -o-animation: var(--fade-in-effect);
+    animation: var(--fade-in-effect);
+  }
+
+  ::selection {
+    color: var(--red-secondary);
+    background: var(--text-color);
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+
+  html {
+    touch-action: manipulation;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    height: 100vh;
+    width: 100vw;
+    word-wrap: break-word;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(min-content, 25%) 1fr;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-weight: normal;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    /* vertical-align: middle; */
+  }
+
+  /* TOP BANNER */
+  header {
+    margin: 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    width: 98%;
+    background-color: var(--green-color);
+    border: 1px solid var(--text-color);
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    width: 98%;
+    top: 0;
+  }
+
+  header h2 {
+    font-weight: normal;
+    min-width: max-content;
+    margin: 0;
+    flex-grow: 1;
+    padding-left: 0.25em;
+  }
+
+  header h2 a {
+    padding: 0 0.5em 0 0.25em;
+  }
+
+  header h2 a:hover {
+    font-style: oblique;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header nav a {
+    /* border-left: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: 1em;
+    padding: 0 0.25em;
+  }
+
+  header nav a:hover {
+    /* text-decoration: underline; */
+    font-style: oblique;
+    /* background-color: yellow; */
+    /* border: 1px solid var(--text-color); */
+  }
+
+  /* MAIN CONTENT */
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.5em;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: normal;
+    font-family: var(--secondary-font);
+  }
+
+  section {
+    padding: 0 0.5em;
+    grid-column: 1;
+    /* border-style: none dashed none none; */
+  }
+
+  section p {
+    margin: 0;
+  }
+
+  section {
+    padding-top: 3em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section nav {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  section nav a {
+    padding: 0.25em 0;
+    display: grid;
+  }
+
+  section nav a+a {
+    border-top: 1px solid var(--text-color);
+  }
+
+  section nav a:hover {
+    /* padding-left: 1em; */
+    font-style: oblique;
+    transition: 0.2s;
+  }
+
+  section nav a img {
+    display: none;
+  }
+
+  /*
+  section nav a:hover::after {
+    content: "";
+    font-family: var(--secondary-font);
+  } */
+  main div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top {
+    margin-top: 3em;
+  }
+
+  div.top img {
+    height: 45vh;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .about {}
+
+  .circle {
+    display: none;
+    background-color: var(--purple-color);
+    border-radius: 1em;
+    width: 0.5em;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    /* transform: rotateX(90); */
+  }
+
+  footer {}
+
+  footer, footer span {}
